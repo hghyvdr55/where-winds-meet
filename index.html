@@ -1,93 +1,186 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Where Winds Meet</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma;
-      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      direction: rtl;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Winds Meet</title>
 
-    header {
-      text-align: center;
-      padding: 80px 20px;
-      background: url("https://i.imgur.com/8ZQZQZQ.jpg") center/cover no-repeat;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma;
+  background: #0b0f1a;
+  color: #eee;
+  direction: rtl;
+}
 
-    header p {
-      font-size: 20px;
-      opacity: 0.9;
-    }
+header {
+  height: 100vh;
+  background:
+    linear-gradient(to bottom, #00000088, #000000ee),
+    url("https://images.alphacoders.com/131/1312035.jpg")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+header h1 {
+  font-size: 60px;
+  color: #f5c16c;
+}
 
-    h2 {
-      color: #f5c16c;
-      margin-bottom: 15px;
-    }
+header p {
+  font-size: 22px;
+  max-width: 700px;
+  margin: 20px auto;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      background: #f5c16c;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-      margin-top: 20px;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 40px;
+  background: #f5c16c;
+  color: #000;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #00000055;
-      font-size: 14px;
-    }
-  </style>
+.lang {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  color: #f5c16c;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #151a2d;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+video, iframe {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* 📱 جوال */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 38px;
+  }
+  header p {
+    font-size: 18px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
+<div class="lang">EN</div>
+
+<header>
+  <div>
     <h1>Where Winds Meet</h1>
-    <p>مغامرة أكشن في عالم الصين القديمة</p>
-    <a class="btn" href="#">قريبًا</a>
-  </header>
-
-  <section>
-    <h2>عن اللعبة</h2>
     <p>
-      Where Winds Meet هي لعبة تقمّص أدوار وأكشن تدور أحداثها في عصر
-      الممالك الخمس في الصين، تجمع بين القتال الحر، القصة العميقة،
-      وعالم مفتوح مليء بالأسرار.
+      تجربة تقمّص أدوار وأكشن في عالم مفتوح مستوحى من
+      الصين القديمة، حيث تصنع اختياراتك مصيرك.
     </p>
-  </section>
+    <a class="btn" href="#">قريبًا</a>
+  </div>
+</header>
 
-  <section>
-    <h2>المميزات</h2>
-    <ul>
-      <li>⚔️ قتال بأسلوب Wuxia</li>
-      <li>🌏 عالم مفتوح ضخم</li>
-      <li>📜 قصة متأثرة بالتاريخ الصيني</li>
-      <li>🎮 قراراتك تغيّر مجرى الأحداث</li>
-    </ul>
-  </section>
+<section>
+  <h2>عن اللعبة</h2>
+  <p>
+    Where Winds Meet هي لعبة أكشن RPG بأسلوب Wuxia،
+    تدور أحداثها في فترة تاريخية مضطربة، وتمنح اللاعب
+    حرية كاملة في القتال، الاستكشاف، واتخاذ القرارات.
+  </p>
+</section>
 
-  <footer>
-    هذا موقع معجبين – غير رسمي © 2025
-  </footer>
+<section>
+  <h2>المميزات</h2>
+  <div class="features">
+    <div class="feature">⚔️ قتال سينمائي حر</div>
+    <div class="feature">🌏 عالم مفتوح ضخم</div>
+    <div class="feature">📜 قصة تتغير حسب قراراتك</div>
+    <div class="feature">🎮 أساليب لعب متعددة</div>
+    <div class="feature">🧭 استكشاف ومدن تاريخية</div>
+    <div class="feature">🎭 شخصيات عميقة</div>
+  </div>
+</section>
+
+<section>
+  <h2>معرض الصور</h2>
+  <div class="gallery">
+    <img src="https://images.alphacoders.com/131/1312036.jpg">
+    <img src="https://images.alphacoders.com/131/1312037.jpg">
+    <img src="https://images.alphacoders.com/131/1312038.jpg">
+  </div>
+</section>
+
+<section>
+  <h2>فيديو العرض</h2>
+  <iframe height="400"
+    src="https://www.youtube.com/embed/7QpC9oG4U5E"
+    title="Where Winds Meet Trailer"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</section>
+
+<footer>
+  موقع معجبين غير رسمي – تصميم وتطوير © 2025
+</footer>
 
 </body>
 </html>
+
