@@ -6,16 +6,30 @@
 <title>Where Winds Meet</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma;
   background: #0b0f1a;
   color: #eee;
   direction: rtl;
+}
+
+/* القائمة العلوية */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000000dd;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+}
+
+nav a {
+  color: #f5c16c;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 header {
@@ -32,7 +46,7 @@ header {
 }
 
 header h1 {
-  font-size: 60px;
+  font-size: 55px;
   color: #f5c16c;
 }
 
@@ -42,28 +56,8 @@ header p {
   margin: 20px auto;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 15px 40px;
-  background: #f5c16c;
-  color: #000;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.lang {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
 section {
-  padding: 70px 20px;
+  padding: 90px 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -73,33 +67,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.feature {
+.box {
   background: #151a2d;
   padding: 20px;
   border-radius: 15px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-video, iframe {
-  width: 100%;
-  border-radius: 15px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -110,13 +82,10 @@ footer {
   opacity: 0.7;
 }
 
-/* 📱 جوال */
+/* للجوال */
 @media (max-width: 768px) {
   header h1 {
     font-size: 38px;
-  }
-  header p {
-    font-size: 18px;
   }
 }
 </style>
@@ -124,62 +93,56 @@ footer {
 
 <body>
 
-<div class="lang">EN</div>
+<!-- القائمة -->
+<nav>
+  <a href="#about">شرح اللعبة</a>
+  <a href="#news">أخبار اللعبة</a>
+  <a href="#guild">النقابة</a>
+  <a href="#titles">الألقاب</a>
+</nav>
 
+<!-- الهيدر -->
 <header>
   <div>
     <h1>Where Winds Meet</h1>
     <p>
-      تجربة تقمّص أدوار وأكشن في عالم مفتوح مستوحى من
+      لعبة تقمّص أدوار وأكشن في عالم مفتوح مستوحى من
       الصين القديمة، حيث تصنع اختياراتك مصيرك.
     </p>
-    <a class="btn" href="#">قريبًا</a>
   </div>
 </header>
 
-<section>
-  <h2>عن اللعبة</h2>
-  <p>
-    Where Winds Meet هي لعبة أكشن RPG بأسلوب Wuxia،
-    تدور أحداثها في فترة تاريخية مضطربة، وتمنح اللاعب
-    حرية كاملة في القتال، الاستكشاف، واتخاذ القرارات.
-  </p>
-</section>
-
-<section>
-  <h2>المميزات</h2>
-  <div class="features">
-    <div class="feature">⚔️ قتال سينمائي حر</div>
-    <div class="feature">🌏 عالم مفتوح ضخم</div>
-    <div class="feature">📜 قصة تتغير حسب قراراتك</div>
-    <div class="feature">🎮 أساليب لعب متعددة</div>
-    <div class="feature">🧭 استكشاف ومدن تاريخية</div>
-    <div class="feature">🎭 شخصيات عميقة</div>
+<!-- شرح اللعبة -->
+<section id="about">
+  <h2>شرح اللعبة</h2>
+  <div class="box">
+    <p>
+      Where Winds Meet هي لعبة أكشن RPG بأسلوب Wuxia،
+      تركز على القتال الحر، الاستكشاف، وبناء شخصية اللاعب.
+      تقدم عالمًا مفتوحًا غنيًا بالمدن، القرى، والأحداث
+      التاريخية المتشابكة.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>معرض الصور</h2>
-  <div class="gallery">
-    <img src="https://images.alphacoders.com/131/1312036.jpg">
-    <img src="https://images.alphacoders.com/131/1312037.jpg">
-    <img src="https://images.alphacoders.com/131/1312038.jpg">
+<!-- أخبار اللعبة -->
+<section id="news">
+  <h2>أخبار اللعبة</h2>
+  <div class="box">
+    <p>📰 لا توجد أخبار حاليًا.</p>
+    <p>سيتم تحديث هذا القسم بكل جديد عن اللعبة والتحديثات القادمة.</p>
   </div>
 </section>
 
-<section>
-  <h2>فيديو العرض</h2>
-  <iframe height="400"
-    src="https://www.youtube.com/embed/7QpC9oG4U5E"
-    title="Where Winds Meet Trailer"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</section>
+<!-- قائمة النقابة -->
+<section id="guild">
+  <h2>قائمة النقابة</h2>
+  <div class="box">
+    <ul>
+      <li>👑 قائد النقابة: اسمك هنا</li>
+      <li>⚔️ نائب القائد: —</li>
+      <li>🛡️ الأعضاء:</li>
 
-<footer>
-  موقع معجبين غير رسمي – تصميم وتطوير © 2025
-</footer>
 
 </body>
 </html>
