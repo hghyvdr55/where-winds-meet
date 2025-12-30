@@ -3,31 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Where Winds Meet</title>
+<title>Where Winds Meet | نقابة</title>
 
 <style>
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma;
+  font-family: Tahoma;
   background: #0b0f1a;
   color: #eee;
   direction: rtl;
 }
 
-/* القائمة العلوية */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000000dd;
-  padding: 15px;
-  z-index: 1000;
+  background: #000;
+  padding: 12px;
   text-align: center;
+  z-index: 1000;
 }
 
 nav a {
   color: #f5c16c;
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -35,25 +34,18 @@ nav a {
 header {
   height: 100vh;
   background:
-    linear-gradient(to bottom, #00000088, #000000ee),
+    linear-gradient(#000000aa, #000000ee),
     url("https://images.alphacoders.com/131/1312035.jpg")
-    center/cover no-repeat;
+    center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
 }
 
 header h1 {
   font-size: 55px;
   color: #f5c16c;
-}
-
-header p {
-  font-size: 22px;
-  max-width: 700px;
-  margin: 20px auto;
 }
 
 section {
@@ -64,84 +56,81 @@ section {
 
 h2 {
   color: #f5c16c;
-  margin-bottom: 20px;
 }
 
 .box {
   background: #151a2d;
   padding: 20px;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
-footer {
-  background: #000;
+button {
+  background: #f5c16c;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* نافذة منبثقة */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #000000cc;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #151a2d;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* للجوال */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 38px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- القائمة -->
 <nav>
-  <a href="#about">شرح اللعبة</a>
-  <a href="#news">أخبار اللعبة</a>
+  <a href="#news">الأخبار</a>
   <a href="#guild">النقابة</a>
+  <a href="#register">تسجيل</a>
   <a href="#titles">الألقاب</a>
 </nav>
 
-<!-- الهيدر -->
 <header>
   <div>
     <h1>Where Winds Meet</h1>
-    <p>
-      لعبة تقمّص أدوار وأكشن في عالم مفتوح مستوحى من
-      الصين القديمة، حيث تصنع اختياراتك مصيرك.
-    </p>
+    <p>موقع نقابة عربي للعبة</p>
   </div>
 </header>
 
-<!-- شرح اللعبة -->
-<section id="about">
-  <h2>شرح اللعبة</h2>
-  <div class="box">
-    <p>
-      Where Winds Meet هي لعبة أكشن RPG بأسلوب Wuxia،
-      تركز على القتال الحر، الاستكشاف، وبناء شخصية اللاعب.
-      تقدم عالمًا مفتوحًا غنيًا بالمدن، القرى، والأحداث
-      التاريخية المتشابكة.
-    </p>
-  </div>
-</section>
-
-<!-- أخبار اللعبة -->
+<!-- الأخبار -->
 <section id="news">
-  <h2>أخبار اللعبة</h2>
-  <div class="box">
-    <p>📰 لا توجد أخبار حاليًا.</p>
-    <p>سيتم تحديث هذا القسم بكل جديد عن اللعبة والتحديثات القادمة.</p>
-  </div>
+<h2>📰 أخبار اللعبة</h2>
+<div class="box">
+  <p>📅 2025/01/10 – فتح التسجيل في النقابة</p>
+  <p>📅 2025/01/05 – تحديث نظام القتال</p>
+</div>
 </section>
 
-<!-- قائمة النقابة -->
+<!-- النقابة -->
 <section id="guild">
-  <h2>قائمة النقابة</h2>
-  <div class="box">
-    <ul>
-      <li>👑 قائد النقابة: اسمك هنا</li>
-      <li>⚔️ نائب القائد: —</li>
-      <li>🛡️ الأعضاء:</li>
+<h2>👥 أعضاء النقابة</h2>
+<div class="box">
+  <ul id="members">
+    <li>👑 ا
+
 
 
 </body>
